@@ -5,93 +5,212 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pavan Kumar Bhojanapu | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  
   <header>
-    <h1>Pavan Kumar Bhojanapu</h1>
-    <nav>
+    <!-- Navigation Section -->
+    <nav class="header-nav">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><i class="fas fa-info-circle"></i> <a href="#about">About</a></li> <!-- Info Circle -->
+        <li><i class="fas fa-project-diagram"></i> <a href="#projects">Projects</a></li> <!-- Project Diagram -->
+        <li><i class="fas fa-file-alt"></i> <a href="#resume">Resume</a></li> <!-- File Alt -->
+        <li><i class="fas fa-certificate"></i> <a href="#certificates">Certificates</a></li> <!-- Certificate -->
+        <li><i class="fas fa-phone-alt"></i> <a href="#contact">Contact</a></li> <!-- Phone -->
       </ul>
     </nav>
   </header>
+  
+  
+  
+  <section>
+    <!-- Profile Section -->
+    <div class="header-top">
+      <img src="images/profile-photo.jpg" alt="Profile Photo" class="profile-pic" />
+      <h1>Pavan Kumar Bhojanapu</h1>
+    </div>
+  </section>
+  
+  <script>
+    const navItems = document.querySelectorAll('.header-nav ul li'); // Target only nav items
+    
+    navItems.forEach(item => {
+      item.addEventListener('click', function() {
+        navItems.forEach(nav => nav.classList.remove('active')); // Remove 'active' from all <li>
+        this.classList.add('active'); // Add 'active' to the clicked <li>
+      });
+    });
+  </script>
+  
+  
+  
+  <!-- Your sections like About, Projects, Resume, Certificates, Contact -->
+
+  
+  
 
   <section id="about">
     <h2>🧠 About Me</h2>
     <p>
-      Hi there! I’m Pavan Kumar Bhojanapu, a passionate and results-driven Computer Science graduate from Lovely Professional University (LPU). My academic journey has equipped me with a solid foundation in various programming languages, including Java, C, and Python, and provided me with the skills to build both desktop and mobile applications. I am particularly skilled in Java development and Android application development, and I have hands-on experience in front-end and back-end development, making me well-versed in full-stack development basics. 
+      Hi, I’m Pavan Kumar Bhojanapu, a Computer Science graduate from LPU with strong skills in Java, C, Python, and Android development. I’m passionate about building efficient, user-friendly applications and have hands-on experience in full-stack basics. I enjoy solving real-world problems with clean, maintainable code and continuously learning new tools and frameworks.
     </p>
     <p>
-      During my studies, I worked on numerous projects, where I focused on solving real-world problems with clean, maintainable, and efficient code. One of my main strengths is my ability to adapt and learn quickly, and I enjoy the challenge of picking up new tools, technologies, and frameworks. Whether it’s working with Java for desktop applications, Android for mobile development, or learning new frameworks for web development, I am constantly expanding my knowledge to stay up to date with industry trends and best practices.
+      I thrive in collaborative environments, value effective communication, and focus on delivering scalable, high-performance software. Beyond coding, I explore emerging technologies, work on personal projects, and contribute to open-source initiatives. I'm always excited to connect, learn, and contribute to innovative solutions.
     </p>
-    <p>
-      My passion lies in developing software that not only meets user needs but also exceeds expectations. I am driven by the idea of creating seamless, functional, and user-friendly applications that provide value. My approach to problem-solving involves breaking down complex tasks into manageable steps and collaborating with others to find the best possible solution. I thrive in environments that promote teamwork and innovation, as I believe great ideas often come from diverse perspectives.
-    </p>
-    <p>
-      In addition to my technical skills, I have honed my ability to communicate effectively with colleagues, clients, and stakeholders, ensuring that projects are completed successfully and efficiently. I’ve also developed an understanding of the importance of writing clean and scalable code, as well as optimizing applications for better performance.
-    </p>
-    <p>
-      When I’m not coding, I enjoy exploring new technologies, working on personal projects, and contributing to open-source initiatives. I am always excited about the opportunity to collaborate with others, exchange ideas, and contribute to innovative solutions that can make a difference. If you’re looking for a dedicated and adaptable developer who is always eager to learn and grow, I’d love to connect with you.
-    </p>
-</section>
-
-
-  <section id="projects">
-    <h2>💼 Projects</h2>
-
-    <div class="project">
-      <h3>Online Voting System (Android App)</h3>
-      <p>This Android-based Online Voting System offers a secure and user-friendly platform for voting, aiming to modernize traditional voting systems by eliminating manual voting methods. The app allows users to log in securely using their credentials, ensuring only authorized individuals can cast their votes. One of the key features is real-time vote casting, which allows users to select their desired candidates and submit their votes instantly. The results are visualized on the app, giving users an up-to-date view of the voting outcome as it progresses. This system supports multiple election types, making it adaptable to different voting scenarios, from government elections to organizational voting. The app integrates encryption techniques to ensure that votes are anonymous and tamper-proof, and it uses a robust database system to store user data and voting records. The back-end is powered by Firebase for real-time data synchronization and scalability. This project demonstrates a comprehensive understanding of mobile application development, security best practices, and real-time data handling. Check out the project for more technical details and explore how it can be implemented in various voting environments.</p>
-      <a href="https://github.com/BhojanapuPavanKumar/app-development" target="_blank">🔗 View on GitHub</a>
-      <img src="images/voting-app.png" alt="Online Voting System Screenshot" />
-    </div>
-
-    <div class="project">
-      <h3>Banking System (Java Desktop App)</h3>
-      <p>The Banking System is a comprehensive desktop application built using Java Swing for the graphical user interface (GUI) and MySQL for the backend database management. The system facilitates various banking operations such as account creation, money transfers, balance inquiries, and transaction histories. With a focus on simplicity and ease of use, this application offers a seamless experience for users to perform basic banking tasks. Users can create accounts, deposit and withdraw funds, transfer money between accounts, and view their account details through a secure login system. The back-end database handles customer data and transaction records, ensuring data integrity and security. This system also includes features like generating bank statements and sending alerts for successful transactions. It leverages MySQL queries to retrieve and update information, ensuring smooth data management. This project demonstrates a solid understanding of object-oriented programming principles, GUI design, database management, and transaction processing. It's an ideal solution for simulating real-world banking operations and can be further extended to include more advanced features such as loan management or financial analytics. Visit the GitHub repository for more information and the source code.</p>
-      <a href="https://github.com/BhojanapuPavanKumar/Application-development" target="_blank">🔗 View on GitHub</a>
-      <img src="images/banking-app.jpg" alt="Banking System Screenshot" />
-    </div>
-
-    <div class="project">
-      <h3>Bus Ticket Generator (C Programming)</h3>
-      <p>The Bus Ticket Generator project is an automated system built using C programming that allows users to book tickets for bus travel. This console-based application simulates a real-world bus ticketing system, providing features such as seat reservation, fare calculation, and dynamic seat allocation. Users can choose their desired bus routes, select available seats, and proceed with booking their tickets. The system calculates the fare based on the chosen seat and route, ensuring that pricing is transparent and straightforward. The backend logic ensures that once a seat is booked, it is marked as unavailable, preventing double bookings. The user interface is simple yet functional, with text-based menus guiding the user through the process. The application also includes functionality to display available seats, making it easy for users to make informed decisions. One of the key features of the project is the dynamic allocation of seats, which adjusts based on user bookings. This project highlights a deep understanding of C programming fundamentals, file handling, and data structures like arrays and structures. It provides an excellent foundation for learning about systems programming and offers a basis for future enhancements such as online ticketing or integration with external APIs. Check out the GitHub repository for the source code and further details on how this system can be improved.</p>
-      <a href="https://github.com/BhojanapuPavanKumar/Bus-ticket-generator" target="_blank">🔗 View on GitHub</a>
-      <img src="images/bus-ticket.png" alt="Bus Ticket Generator Screenshot" />
-    </div>
-</section>
-
-
-  <section id="resume">
-    <h2>📄 Resume</h2>
-
-    <h3>Education</h3>
-    <ul>
-      <li><strong>Lovely Professional University</strong> – B.Tech in Computer Science and Engineering</li>
-      <li><strong>Sri Chaitanya Junior College</strong> – Intermediate</li>
-      <li><strong>MNR School of Excellence</strong> – Matriculation</li>
-    </ul>
-
-    <h3>Skills</h3>
-    <ul>
-      <li><strong>Languages:</strong> Java, C++, C, Python, SQL</li>
-      <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
-      <li><strong>Tools:</strong> Android Studio, Linux, AWS, Docker, MySQL, Git, GitHub</li>
-      <li><strong>Soft Skills:</strong> Teamwork, Adaptability, Problem Solving</li>
-    </ul>
-
-    <h3>Work/Internship</h3>
-    <p><strong>Academor Edtech Pvt Ltd</strong> – Android Developer Intern (Aug 2024)</p>
-    <ul>
-      <li>Built Android apps for academic projects with Java and Android Studio</li>
-      <li>Collaborated on features, design, and testing</li>
-    </ul>
-
-    <p><a href="PavanKumar_CV.pdf" download>📥 Download Resume (PDF)</a></p>
   </section>
+  
+
+
+<section id="projects">
+  <h2>💼 Projects</h2>
+
+  <div class="project">
+    <h3>Online Voting System (Android App)</h3>
+    <p>This Android-based Online Voting System offers a secure and user-friendly platform for voting, aiming to modernize traditional voting systems by eliminating manual voting methods...</p>
+    <a href="https://github.com/BhojanapuPavanKumar/app-development" target="_blank">🔗 View on GitHub</a>
+    <div class="project-images">
+      <img src="images/voting-app-1.png" alt="Online Voting System Screenshot 1" />
+      <img src="images/voting-app-2.png" alt="Online Voting System Screenshot 2" />
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Banking System (Java Desktop App)</h3>
+    <p>The Banking System is a comprehensive desktop application built using Java Swing for the graphical user interface (GUI) and MySQL for the backend database management...</p>
+    <a href="https://github.com/BhojanapuPavanKumar/Application-development" target="_blank">🔗 View on GitHub</a>
+    <div class="project-images">
+      <img src="images/banking-app-1.jpg" alt="Banking System Screenshot 1" />
+      <img src="images/banking-app-2.jpg" alt="Banking System Screenshot 2" />
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Bus Ticket Generator (C Programming)</h3>
+    <p>The Bus Ticket Generator project is an automated system built using C programming that allows users to book tickets for bus travel...</p>
+    <a href="https://github.com/BhojanapuPavanKumar/Bus-ticket-generator" target="_blank">🔗 View on GitHub</a>
+    <div class="project-images">
+      <img src="images/bus-ticket-1.png" alt="Bus Ticket Generator Screenshot 1" />
+      <img src="images/bus-ticket-2.png" alt="Bus Ticket Generator Screenshot 2" />
+    </div>
+  </div>
+</section>
+
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card">Java</div>
+    <div class="skill-card">C++</div>
+    <div class="skill-card">C</div>
+    <div class="skill-card">Python</div>
+    <div class="skill-card">SQL</div>
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">MySQL</div>
+  </div>
+
+  <h2 style="margin-top: 40px;">Tools & Platforms</h2>
+  <div class="skills-container">
+    <div class="skill-card">Wireshark</div>
+    <div class="skill-card">Metasploit</div>
+    <div class="skill-card">Android Studio</div>
+    <div class="skill-card">Linux</div>
+    <div class="skill-card">Windows Server</div>
+    <div class="skill-card">AWS</div>
+    <div class="skill-card">Docker</div>
+    <div class="skill-card">Git</div>
+    <div class="skill-card">GitHub</div>
+    <div class="skill-card">Eclipse IDE</div>
+  </div>
+</section>
+
+
+
+
+<section id="resume">
+  <h2>📄My Resume</h2>
+  
+  <p style="text-align: center; margin-top: 20px;">
+    <a href="PavanKumar_CV.pdf" download style="display: inline-block; padding: 12px 24px; background-color: #00d9ff; color: #000; border-radius: 10px; text-decoration: none; font-weight: bold; transition: background-color 0.3s ease;">
+      📥 Download Resume (PDF)
+    </a>
+  </p>
+</section>
+
+
+
+
+    <section id="internships">
+  <h2>Internships</h2>
+  <div class="internship-container">
+    
+    <div class="internship">
+      <h3>Android App Development Internship - Academor Edtech E-Learning Pvt Ltd</h3>
+      <p>Completed an internship during August 2024 focused on Android application development. 
+      Gained hands-on experience building both minor and major projects, demonstrating strong problem-solving abilities, adaptability, and technical skills. 
+      Delivered high-quality reports and presentations with strong attention to detail. 
+      Recognized for outstanding performance during the internship.</p>
+      
+      <p><strong>Technologies Used:</strong> Android Studio, Java, XML</p>
+      
+      <div class="internship-images">
+        <div class="internship-image">
+          <img src="images/internship-certificate.jpg" alt="Internship Certificate" />
+          <p>Internship Certificate</p>
+        </div>
+        <div class="internship-image">
+          <img src="images/letter-recommendation.jpg" alt="Letter of Recommendation" />
+          <p>Letter of Recommendation</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    
+
+<section id="certificates">
+  <h2>Certificates</h2>
+
+  <div class="certificate-gallery-custom">
+
+    <div class="row-horizontal">
+      <div class="certificate-item">
+        <img src="images/certificate-cloud-computing.jpg" alt="Cloud Computing Certificate">
+        <p>Cloud Computing (NPTEL)</p>
+      </div>
+      <div class="certificate-item">
+        <img src="images/certificate-android-development.jpg" alt="Android App Development Certificate">
+        <p>Android App Development (Academor)</p>
+      </div>
+    </div>
+
+    <div class="row-vertical">
+      <div class="certificate-item">
+        <img src="images/certificate-java.jpg" alt="Java Application Development Certificate">
+        <p>Java Application Development (LPU)</p>
+      </div>
+      <div class="certificate-item">
+        <img src="images/certificate-c.jpg" alt="C Programming Certificate">
+        <p>C Programming for Beginners (Udemy)</p>
+      </div>
+    </div>
+
+    <div class="row-horizontal">
+      <div class="certificate-item">
+        <img src="images/certificate-tableau.png" alt="Tableau Visualization Certificate">
+        <p>Fundamentals of Visualization with Tableau (Infosys)</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    
+  
 
   <section id="socials">
     <h2>🌐 Socials</h2>
